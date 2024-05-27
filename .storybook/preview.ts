@@ -1,4 +1,7 @@
 import type { Preview } from "@storybook/react";
+import 'tailwindcss/tailwind.css';
+import "../app/globals.css";
+import withAppRouterContext from '../app/provider/withAppRouterContext';
 
 const preview: Preview = {
   parameters: {
@@ -9,6 +12,7 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [withAppRouterContext],
 };
 
 export default preview;
